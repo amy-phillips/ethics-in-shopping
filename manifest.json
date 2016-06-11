@@ -10,11 +10,6 @@
     "default_popup": "popup.html",
     "default_title": "Click here for ethical shopping advice!"
   },
-  // TODO - check permissions and content_scripts!
-  "permissions": [
-    "activeTab",
-    "<all_urls>"
-  ],
   "content_scripts": [
     {
       "matches": ["http://www.sainsburys.co.uk/*"],
