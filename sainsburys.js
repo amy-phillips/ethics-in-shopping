@@ -73,13 +73,8 @@ function waitForReady(){
         }, 10 );
     }
     else{
-        //SetBrandCheckboxes();  
-        // we wait a further second because the sainsburys js blats over my bg colours if I don't let it go first
-        // sorry, bit hacky
-        setTimeout(function(){
-            SetItemBackgrounds();
-        }, 1000 );
-        
+        // we run our code to set bg colours periodically to deal with users filtering etc
+        setInterval(SetItemBackgrounds, 2000);
     }
 
 }

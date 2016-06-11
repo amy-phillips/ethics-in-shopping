@@ -17,7 +17,7 @@
   ],
   "content_scripts": [
     {
-      "matches": ["http://www.sainsburys.co.uk/shop/*"],
+      "matches": ["http://www.sainsburys.co.uk/*"],
       "js": ["thirdParty/jquery-3.0.0.min.js", "ethics_data.js", "sainsburys.js"]
     }
   ]
