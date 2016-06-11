@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "Ethics In Shopping",
+  "description": "This extension currently displays information about the ethics of the currently viewed Sainsburys item.  Eventually I'd like to extend it to a multitude of sites and types of goods.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Click here for ethical shopping advice!"
+  },
+  // TODO - check permissions and content_scripts!
+  "permissions": [
+    "activeTab",
+    "<all_urls>"
+  ]
+  
+}
