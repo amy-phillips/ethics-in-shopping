@@ -1,40 +1,23 @@
 
-/* doesn't work - I don;t really understand how the form and checkboxes interact...
-function SetBrandCheckboxes() {
-    // find the Top Brands section and extract the brand names
-    var brandsdiv = $('.topBrands');
-    var checkboxes = brandsdiv.find(".checkboxes").find(".input");
-    checkboxes.each(function(){
-        // grab the brand text from the label
-        var brandname = $(this).find("label").text();
 
-        // set checkbox based on goodness
-        if(gGoodCompanies.includes(brandname)) {
-            console.log(brandname + " is a goodie");
-            $(this).find("[type=checkbox]").trigger('click');
-           // checker.prop('checked', true);
-           // checker.prop('defaultChecked', true);
-        } else if(gBadCompanies.includes(brandname)) {
-            console.log(brandname + " is a baddie");
-          //  $(this).find("checkbox").prop('checked', false);
-        } else {
-            console.log(brandname + " is unknown");
-            $(this).find("[type=checkbox]").trigger('click');
-          //  $(this).find("checkbox").prop('checked', false);
-        }
-    });
-
-    // submit form with new checkboxes
-    //$(".shelfFilterOptions").submit();
-
-}
-*/
 
 function TitleContainsACompany(title, companies) {
     var arrayLength = companies.length;
-    for (var i = 0; i < arrayLength; i++) {
-        if(title.indexOf(companies[i]) != -1){
+    for (var c = 0; c < arrayLength; c++) {
+        // first check if the company name is in the item title
+        if(title.indexOf(companies[c].company) == -1){
+            continue;
+        }
+
+        // next check we have at least one of the item names
+        var prodLength = companies[c].products.length;
+        if(prodLength == 0)
             return true;
+        
+        for (var p = 0; p < prodLength; p++) {
+            if(title.indexOf(companies[c].products[p]) != -1){
+                return true;
+            }
         }
     }
 
@@ -48,17 +31,14 @@ function SetItemBackgrounds() {
         var brandname = $(this).find(".productNameAndPromotions").text();
 
         // set bg colour based on goodness
-        if(TitleContainsACompany(brandname, gGoodCompanies)) {
-            console.log(brandname + " is a goodie");
-            $(this).css('background-color', 'lawngreen');
-        
-        } else if(TitleContainsACompany(brandname, gBadCompanies)) {
+        if(TitleContainsACompany(brandname, gBadProducts)) {
             console.log(brandname + " is a baddie");
             $(this).css('background-color', 'tomato');
-           
+        } else if(TitleContainsACompany(brandname, gGoodProducts)) {
+            console.log(brandname + " is a goodie");
+            $(this).css('background-color', 'lawngreen'); 
         } else {
             console.log(brandname + " is unknown");
-           
         }
     });
 }
