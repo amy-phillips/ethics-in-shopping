@@ -17,10 +17,24 @@ var gGoodProducts = [
 { company: "Mcvitie's", products: ["Light Rich Tea"] },
 { company: "McVitie's", products: ["Light Digestive Biscuits"] },
 { company: "Sainsbury's", products: ["Shortbread"] }, // (except Basics) see BadProducts
-{ company: "Sainsbury's", products: ["Cookies, Taste the Difference"] },
+{ company: "Sainsbury's", products: ["Cookies, Taste the Difference", "Cookies"] },
 { company: "Sainsbury's Cookies", products: ["Taste the Difference"] }, // these two entries should cover all taste the diff cookies
 { company: "Sainsbury's", products: ["SO Organic chocolate chip cookies","SO Organic dark chocolate orange","Flapjack Cookies","Jaffa Cakes","Almond Cantuccini"] }, 
 //M&S: Shortbread Rounds & Fingers, All Butter Dunkers, All Butter Cookies, All Butter Biscuits, All Butter Battenberg Squares, Viennese Swirls, Viennese Chocolate Dipped Fingers, Roly Poly Swirls, Mini Oat, Belgian Chocolate Chunk Cookies
+
+//Use certified sustainable palm oil - 
+{ company: "Nairn's", products: ["Oatcake","Biscuit"] },
+{ company: "Bahlsen", products: ["Biscuit"] },
+{ company: "Walkers", products: ["Biscuit"] },
+{ company: "Hill Biscuits", products: [] },
+{ company: "Burton's Biscuits", products: [] },
+{ company: "Mrs Crimble's", products: ["Macaroon","Bakewell"] },
+{ company: "Mrs. Crimble's", products: ["Macaroon","Bakewell"] },
+{ company: "Crawfords", products: ["Biscuit"] },
+{ company: "McVitie's", products: ["Biscuit","Digestive","Biscuits","Digestives"] },
+{ company: "Oreo", products: ["Biscuit"] },
+{ company: "Cadbury", products: ["Biscuit"] },
+{ company: "Sainsbury's", products: ["Biscuit","Digestive","Biscuits","Digestives"] },
 
 // pet food - palm oil free
 { company: "Ami", products: [] },

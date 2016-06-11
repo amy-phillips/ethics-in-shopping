@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Ethics In Shopping",
-  "description": "This extension currently displays information about the ethics of the currently viewed Sainsburys item.  Eventually I'd like to extend it to a multitude of sites and types of goods.",
+  "description": "This extension tells you which Sainsbury's items contain unethical palm oil by setting the background colour.",
   "version": "1.0",
 
   "browser_action": {
