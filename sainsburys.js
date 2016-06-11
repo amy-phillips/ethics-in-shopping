@@ -1,5 +1,5 @@
 
-
+/* doesn't work - I don;t really understand how the form and checkboxes interact...
 function SetBrandCheckboxes() {
     // find the Top Brands section and extract the brand names
     var brandsdiv = $('.topBrands');
@@ -28,7 +28,7 @@ function SetBrandCheckboxes() {
     //$(".shelfFilterOptions").submit();
 
 }
-
+*/
 
 function TitleContainsACompany(title, companies) {
     var arrayLength = companies.length;
