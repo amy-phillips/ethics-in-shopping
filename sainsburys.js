@@ -1,5 +1,5 @@
 
-/* doesn;t work yet - don;t understand the forms/checkboxes interaction
+
 function SetBrandCheckboxes() {
     // find the Top Brands section and extract the brand names
     var brandsdiv = $('.topBrands');
@@ -11,24 +11,24 @@ function SetBrandCheckboxes() {
         // set checkbox based on goodness
         if(gGoodCompanies.includes(brandname)) {
             console.log(brandname + " is a goodie");
-            var checker = $(this).find("[type=checkbox]");
-            checker.prop('checked', true);
+            $(this).find("[type=checkbox]").trigger('click');
+           // checker.prop('checked', true);
            // checker.prop('defaultChecked', true);
-            console.watch(checker, "checked");
         } else if(gBadCompanies.includes(brandname)) {
             console.log(brandname + " is a baddie");
-            $(this).find("checkbox").prop('checked', false);
+          //  $(this).find("checkbox").prop('checked', false);
         } else {
             console.log(brandname + " is unknown");
-            $(this).find("checkbox").prop('checked', false);
+            $(this).find("[type=checkbox]").trigger('click');
+          //  $(this).find("checkbox").prop('checked', false);
         }
     });
 
     // submit form with new checkboxes
-    $(".shelfFilterOptions").submit();
+    //$(".shelfFilterOptions").submit();
 
 }
-*/
+
 
 function TitleContainsACompany(title, companies) {
     var arrayLength = companies.length;
@@ -63,17 +63,23 @@ function SetItemBackgrounds() {
     });
 }
 
+
 function waitForReady(){
 
-    // ensure document readystate is complete before loading scripts
+    // ensure document readystate is complete before messing with colours
     if( document.readyState !== 'complete'){
         setTimeout(function(){
             waitForReady();
-        }, 1 );
+        }, 10 );
     }
     else{
-        //SetBrandCheckboxes();    
-        SetItemBackgrounds();
+        //SetBrandCheckboxes();  
+        // we wait a further second because the sainsburys js blats over my bg colours if I don't let it go first
+        // sorry, bit hacky
+        setTimeout(function(){
+            SetItemBackgrounds();
+        }, 1000 );
+        
     }
 
 }

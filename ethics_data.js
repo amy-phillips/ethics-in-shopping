@@ -10,8 +10,22 @@ var gGoodCompanies = [
     "Vivani",       // (organic),
     "Ferrero Rocher",
     "Raffaello",
-    "Nestle",       // brands (After Eight, Black Magic, Dairy Box, Quality Street),
-    "Mondelez",     // brands (Green & Black's Organic Collection, Milk Tray, Roses, Heroes, Terry's Chocolate Orange, Terry's All Gold, Toblerone),
+
+    "Nestle",       // brands (
+    "After Eight", 
+    "Black Magic",
+    "Dairy Box", 
+    "Quality Street",   //) end Nestle
+
+    "Mondelez",     // brands (
+    "Green & Black's",
+    "Milk Tray", 
+    "Roses", 
+    "Heroes", 
+    "Terry's Chocolate Orange",
+    "Terry's All Gold",
+    "Toblerone",    //) end Mondelez
+
     "Mars",         // brands (Celebrations),
     "Guylian",
     "Lindt",        //: Lindor, Lindt
