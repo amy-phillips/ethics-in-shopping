@@ -1,6 +1,8 @@
 // data from ethical consumer website (http://www.ethicalconsumer.org/shoppingethically/palmoilfreelist.aspx)
 // - TODO update this to use data from the database at http://www.corporatecritic.org/
 
+
+
 var gGoodProducts = [
 // biscuits
 { company: "Island Bakery", products: [] },
@@ -56,7 +58,8 @@ var gGoodProducts = [
 { company: "Biona", products: [] },
 { company: "Suma", products: [] },
 { company: "Meridian", products: [] },
-{ company: "Whole Earth", products: ["100% Peanuts organic"] },
+{ company: "Whole Earth", products: [] },
+{ company: "Sun Pat", products: [] }, // uses peanut oil
 
 // chocolate spread
 // Waitrose Seriously Chocolatey
@@ -68,7 +71,7 @@ var gGoodProducts = [
 { company: "Vivani", products: [] },
 { company: "Nutella", products: [] },
 { company: "Cadbury", products: ["Chocolate Spread"] },
-{ company: "Sainsbury's", products: ["Chocolate Spread"] },
+{ company: "Sainsbury's", products: ["Chocolate Spread", "Caramel Spread", "Chocolate Swirl Spread"] },
 //Waitrose, Co-op, M&S
 
 //Boxes of chocolates and gift chocolates

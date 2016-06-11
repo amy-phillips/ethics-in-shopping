@@ -38,7 +38,7 @@ function SetItemBackgrounds() {
             console.log(brandname + " is a goodie");
             $(this).css('background-color', 'lawngreen'); 
         } else {
-            console.log(brandname + " is unknown");
+            //console.log(brandname + " is unknown");
         }
     });
 }
