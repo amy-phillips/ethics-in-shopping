@@ -18,6 +18,7 @@ HoverTextEnum = {
 
     chocspread_nopalm : ' is palm oil free.  For more details click the extension icon in the top right of your browser and follow the link to the Ethical Consumer website',
     chocspread_sustainable : ' uses sustainable palm oil.  For more details click the extension icon in the top right of your browser and follow the link to the Ethical Consumer website',
+    chocspread_bad : ' uses unsustainable palm oil.  For more details and a list of more ethical alternatives click the extension icon in the top right of your browser and follow the link to the Ethical Consumer website',
 
     chocs_nopalm : ' is palm oil free.  For more details click the extension icon in the top right of your browser and follow the link to the Ethical Consumer website',
     chocs_sustainable : ' uses sustainable palm oil.  For more details click the extension icon in the top right of your browser and follow the link to the Ethical Consumer website',
@@ -51,45 +52,39 @@ Use certified sustainable palm oil - Nairn's, Bahlsen, Walkers, Hill Biscuits, M
 Worst company rating for palm oil:
 ASDA, Morrisons, Tesco, Aldi, Lidl, Iceland
 */
-{ company: "Island Bakery", products: [], hover: HoverTextEnum.biscuits_nopalm },
+{ company: ["Island Bakery"], products: [], hover: HoverTextEnum.biscuits_nopalm },
 //Waitrose Duchy Organic all biscuits
 //Co-op: All Butter Shortbread Fingers, Jaffa Cakes, Truly Irresistible Cookies
-{ company: "Bahlsen", products: ["Choco Leibniz Biscuits"], hover: HoverTextEnum.biscuits_nopalm }, 
-{ company: "Walkers", products: ["Shortbread"], hover: HoverTextEnum.biscuits_nopalm }, 
-{ company: "Walkers", products: ["All Butter Sultana Biscuits"], hover: HoverTextEnum.biscuits_nopalm },
-{ company: "Walkers", products: ["Chocolate Chip"], hover: HoverTextEnum.biscuits_nopalm },
+{ company: ["Bahlsen"], products: ["Leibniz"], hover: HoverTextEnum.biscuits_nopalm }, 
+{ company: ["Walkers"], products: ["Shortbread","All Butter Sultana Biscuits","Chocolate Chip"], hover: HoverTextEnum.biscuits_nopalm }, 
 //Waitrose: All Butter Cookies, Milk Chocolate & Chocolate Chip Cookies, Scottish Shortbread, Belgian dark chocolate thins, Viennese swirls & fingers, Seriously shortbread, Seriously chocolate and ginger biscuits, Seriously triple chocolate, Continental milk chocolate butter biscuits, Continental dark chocolate butter biscuits
-{ company: "McVitie's", products: ["Rich Tea"], hover: HoverTextEnum.biscuits_nopalm },
-{ company: "Mcvitie's", products: ["Light Rich Tea"], hover: HoverTextEnum.biscuits_nopalm },
-{ company: "McVitie's", products: ["Light Digestive Biscuits"], hover: HoverTextEnum.biscuits_nopalm },
-{ company: "Sainsbury's", products: ["Shortbread"], hover: HoverTextEnum.biscuits_nopalm }, // (except Basics) see BadProducts
-{ company: "Sainsbury's", products: ["Cookies, Taste the Difference", "Cookies"], hover: HoverTextEnum.biscuits_nopalm },
-{ company: "Sainsbury's Cookies", products: ["Taste the Difference"], hover: HoverTextEnum.biscuits_nopalm }, // these two entries should cover all taste the diff cookies
-{ company: "Sainsbury's", products: ["SO Organic chocolate chip cookies","SO Organic dark chocolate orange","Flapjack Cookies","Jaffa Cakes","Almond Cantuccini"], hover: HoverTextEnum.biscuits_nopalm }, 
+{ company: ["McVitie's","Mcvities"], products: ["Rich Tea","Light Digestive Biscuits"], hover: HoverTextEnum.biscuits_nopalm },
+{ company: ["Sainsbury's"], products: ["Shortbread","Cookies, Taste the Difference", "Cookies","SO Organic chocolate chip cookies","SO Organic dark chocolate orange","Flapjack Cookies","Jaffa Cakes","Almond Cantuccini"], hover: HoverTextEnum.biscuits_nopalm }, // (except Basics) see BadProducts
+{ company: ["Sainsbury's Cookies"], products: ["Taste the Difference"], hover: HoverTextEnum.biscuits_nopalm }, // these two entries should cover all taste the diff cookies 
 //M&S: Shortbread Rounds & Fingers, All Butter Dunkers, All Butter Cookies, All Butter Biscuits, All Butter Battenberg Squares, Viennese Swirls, Viennese Chocolate Dipped Fingers, Roly Poly Swirls, Mini Oat, Belgian Chocolate Chunk Cookies
 
 //Use organic palm oil -
-{ company: "Against the Grain", products: [], hover: HoverTextEnum.biscuits_organic },
-{ company: "Biona", products: [], hover: HoverTextEnum.biscuits_organic },
-{ company: "Doves Farm", products: [], hover: HoverTextEnum.biscuits_organic },
-{ company: "Duchy Originals", products: [], hover: HoverTextEnum.biscuits_organic },
+{ company: ["Against the Grain"], products: [], hover: HoverTextEnum.biscuits_organic },
+{ company: ["Biona"], products: [], hover: HoverTextEnum.biscuits_organic },
+{ company: ["Doves Farm"], products: [], hover: HoverTextEnum.biscuits_organic },
+{ company: ["Duchy Originals"], products: [], hover: HoverTextEnum.biscuits_organic },
 
 //Use FairPalm - Traidcraft
-{ company: "Traidcraft", products: [], hover: HoverTextEnum.biscuits_fairpalm },
+{ company: ["Traidcraft"], products: [], hover: HoverTextEnum.biscuits_fairpalm },
 
 //Use certified sustainable palm oil - 
-{ company: "Nairn's", products: ["Oatcake","Biscuit"], hover: HoverTextEnum.biscuits_sustainable },
-{ company: "Bahlsen", products: ["Biscuit"], hover: HoverTextEnum.biscuits_sustainable },
-{ company: "Walkers", products: ["Biscuit"], hover: HoverTextEnum.biscuits_sustainable },
-{ company: "Hill Biscuits", products: [], hover: HoverTextEnum.biscuits_sustainable },
-{ company: "Burton's Biscuits", products: [], hover: HoverTextEnum.biscuits_sustainable },
-{ company: "Mrs Crimble's", products: ["Macaroon","Bakewell"], hover: HoverTextEnum.biscuits_sustainable },
-{ company: "Mrs. Crimble's", products: ["Macaroon","Bakewell"], hover: HoverTextEnum.biscuits_sustainable },
-{ company: "Crawfords", products: ["Biscuit"], hover: HoverTextEnum.biscuits_sustainable },
-{ company: "McVitie's", products: ["Biscuit","Digestive","Biscuits","Digestives"], hover: HoverTextEnum.biscuits_sustainable },
-{ company: "Oreo", products: ["Biscuit"], hover: HoverTextEnum.biscuits_sustainable },
-{ company: "Cadbury", products: ["Biscuit"], hover: HoverTextEnum.biscuits_sustainable },
-{ company: "Sainsbury's", products: ["Biscuit","Digestive","Biscuits","Digestives"], hover: HoverTextEnum.biscuits_sustainable },
+{ company: ["Nairn's"], products: ["Oatcake","Biscuit"], hover: HoverTextEnum.biscuits_sustainable },
+{ company: ["Bahlsen"], products: ["Biscuit"], hover: HoverTextEnum.biscuits_sustainable },
+{ company: ["Walkers"], products: ["Biscuit"], hover: HoverTextEnum.biscuits_sustainable },
+{ company: ["Hill Biscuits"], products: [], hover: HoverTextEnum.biscuits_sustainable },
+{ company: ["Burton's Biscuits"], products: [], hover: HoverTextEnum.biscuits_sustainable },
+{ company: ["Mrs Crimble's"], products: ["Macaroon","Bakewell"], hover: HoverTextEnum.biscuits_sustainable },
+{ company: ["Mrs. Crimble's"], products: ["Macaroon","Bakewell"], hover: HoverTextEnum.biscuits_sustainable },
+{ company: ["Crawfords"], products: ["Biscuit"], hover: HoverTextEnum.biscuits_sustainable },
+{ company: ["McVitie's"], products: ["Biscuit","Digestive","Biscuits","Digestives"], hover: HoverTextEnum.biscuits_sustainable },
+{ company: ["Oreo"], products: ["Biscuit"], hover: HoverTextEnum.biscuits_sustainable },
+{ company: ["Cadbury"], products: ["Biscuit"], hover: HoverTextEnum.biscuits_sustainable },
+{ company: ["Sainsbury's"], products: ["Biscuit","Digestive","Biscuits","Digestives"], hover: HoverTextEnum.biscuits_sustainable },
 
 /******************************************************************************************************
 Pet food
@@ -101,34 +96,34 @@ Use certified sustainable palm oil - Hill’s, Nestlé Purina brands (Felix, Go-
 Worst company rating for palm oil:
 Applaws, Encore, Butcher's, Hi-Life, Eukanuba, Iams, Tesco, Morrisons, ASDA, Aldi, Lidl
  */
-{ company: "Ami", products: [], hover: HoverTextEnum.petfood_nopalm },
-{ company: "Benevo", products: [], hover: HoverTextEnum.petfood_nopalm },
-{ company: "Yarrah", products: [], hover: HoverTextEnum.petfood_nopalm },
-{ company: "Burns", products: [], hover: HoverTextEnum.petfood_nopalm },
-{ company: "Meowing Heads", products: [], hover: HoverTextEnum.petfood_nopalm },
-{ company: "Harringtons", products: [], hover: HoverTextEnum.petfood_nopalm },
-{ company: "Wagg", products: [], hover: HoverTextEnum.petfood_nopalm },
-{ company: "Barking Heads", products: [], hover: HoverTextEnum.petfood_nopalm },
-{ company: "V-Dog", products: [], hover: HoverTextEnum.petfood_nopalm },
+{ company: ["Ami"], products: [], hover: HoverTextEnum.petfood_nopalm },
+{ company: ["Benevo"], products: [], hover: HoverTextEnum.petfood_nopalm },
+{ company: ["Yarrah"], products: [], hover: HoverTextEnum.petfood_nopalm },
+{ company: ["Burns"], products: [], hover: HoverTextEnum.petfood_nopalm },
+{ company: ["Meowing Heads"], products: [], hover: HoverTextEnum.petfood_nopalm },
+{ company: ["Harringtons"], products: [], hover: HoverTextEnum.petfood_nopalm },
+{ company: ["Wagg"], products: [], hover: HoverTextEnum.petfood_nopalm },
+{ company: ["Barking Heads"], products: [], hover: HoverTextEnum.petfood_nopalm },
+{ company: ["V-Dog"], products: [], hover: HoverTextEnum.petfood_nopalm },
 
-{ company: "Hill’s", products: [], hover: HoverTextEnum.petfood_sustainable },
-{ company: "Felix", products: [], hover: HoverTextEnum.petfood_sustainable },
-{ company: "Go-Cat", products: [], hover: HoverTextEnum.petfood_sustainable },
-{ company: "Purina", products: [], hover: HoverTextEnum.petfood_sustainable },
-{ company: "Gourmet", products: [], hover: HoverTextEnum.petfood_sustainable },
-{ company: "Bakers", products: [], hover: HoverTextEnum.petfood_sustainable },
-{ company: "Bonio", products: [], hover: HoverTextEnum.petfood_sustainable },
-{ company: "Winalot", products: [], hover: HoverTextEnum.petfood_sustainable },
-{ company: "Whiskas", products: [], hover: HoverTextEnum.petfood_sustainable },
-{ company: "Sheba", products: [], hover: HoverTextEnum.petfood_sustainable },
-{ company: "Kitekat", products: [], hover: HoverTextEnum.petfood_sustainable },
-{ company: "James Wellbeloved", products: [], hover: HoverTextEnum.petfood_sustainable },
-{ company: "Royal Canin", products: [], hover: HoverTextEnum.petfood_sustainable },
-{ company: "Pal", products: [], hover: HoverTextEnum.petfood_sustainable },
-{ company: "Pedigree", products: [], hover: HoverTextEnum.petfood_sustainable },
-{ company: "Cesar", products: [], hover: HoverTextEnum.petfood_sustainable },
-{ company: "Chappie", products: [], hover: HoverTextEnum.petfood_sustainable },
-{ company: "Sainsbury's", products: ["Delicious Collection"], hover: HoverTextEnum.petfood_sustainable },
+{ company: ["Hill’s"], products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: ["Felix"], products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: ["Go-Cat"], products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: ["Purina"], products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: ["Gourmet"], products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: ["Bakers"], products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: ["Bonio"], products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: ["Winalot"], products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: ["Whiskas"], products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: ["Sheba"], products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: ["Kitekat"], products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: ["James Wellbeloved"], products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: ["Royal Canin"], products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: ["Pal"], products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: ["Pedigree"], products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: ["Cesar"], products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: ["Chappie"], products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: ["Sainsbury's"], products: ["Delicious Collection"], hover: HoverTextEnum.petfood_sustainable },
  
 /******************************************************************************************************
 Palm oil free nut butters:
@@ -142,14 +137,14 @@ Best company rating for palm oil:
 Palm oil free company - Meridian
 Use certified sustainable palm oil - Essential (organic), Biona (organic), Suma, Whole Earth, Sainsbury's, Waitrose, Co-op, M&S
 */
-{ company: "Essential", products: [], hover: HoverTextEnum.nutbutter_nopalm },
-{ company: "Biona", products: [], hover: HoverTextEnum.nutbutter_nopalm },
-{ company: "Suma", products: [], hover: HoverTextEnum.nutbutter_nopalm },
-{ company: "Meridian", products: [], hover: HoverTextEnum.nutbutter_nopalm },
-{ company: "Whole Earth", products: [], hover: HoverTextEnum.nutbutter_nopalm },
-{ company: "Sun Pat", products: [], hover: HoverTextEnum.nutbutter_nopalm }, // uses peanut oil
+{ company: ["Essential"], products: [], hover: HoverTextEnum.nutbutter_nopalm },
+{ company: ["Biona"], products: [], hover: HoverTextEnum.nutbutter_nopalm },
+{ company: ["Suma"], products: [], hover: HoverTextEnum.nutbutter_nopalm },
+{ company: ["Meridian"], products: [], hover: HoverTextEnum.nutbutter_nopalm },
+{ company: ["Whole Earth"], products: [], hover: HoverTextEnum.nutbutter_nopalm },
+{ company: ["Sun Pat"], products: [], hover: HoverTextEnum.nutbutter_nopalm }, // uses peanut oil
 
-{ company: "Sainsbury's", products: ["Peanut Butter"], hover: HoverTextEnum.nutbutter_sustainable },
+{ company: ["Sainsbury's"], products: ["Peanut Butter"], hover: HoverTextEnum.nutbutter_sustainable },
 
 /******************************************************************************************************
 Chocolate spread
@@ -161,14 +156,14 @@ Waitrose Seriously Chocolatey
 Best company rating for palm oil:
 Use certified sustainable palm oil - Essential (Fairtrade & organic), Plamil (organic & vegan), Biona (organic), Traidcraft (FairPalm), Vivani (organic), Nutella, Cadbury, Sainsbury's, Waitrose, Co-op, M&S
 */
-{ company: "Essential", products: [], hover: HoverTextEnum.chocspread_sustainable },
-{ company: "Plamil", products: [], hover: HoverTextEnum.chocspread_sustainable },
-{ company: "Biona", products: [], hover: HoverTextEnum.chocspread_sustainable },
-{ company: "Traidcraft", products: [], hover: HoverTextEnum.chocspread_sustainable },
-{ company: "Vivani", products: [], hover: HoverTextEnum.chocspread_sustainable },
-{ company: "Nutella", products: [], hover: HoverTextEnum.chocspread_sustainable },
-{ company: "Cadbury", products: ["Chocolate Spread"], hover: HoverTextEnum.chocspread_sustainable },
-{ company: "Sainsbury's", products: ["Chocolate Spread", "Caramel Spread", "Chocolate Swirl Spread"], hover: HoverTextEnum.chocspread_sustainable },
+{ company: ["Essential"], products: [], hover: HoverTextEnum.chocspread_sustainable },
+{ company: ["Plamil"], products: [], hover: HoverTextEnum.chocspread_sustainable },
+{ company: ["Biona"], products: [], hover: HoverTextEnum.chocspread_sustainable },
+{ company: ["Traidcraft"], products: [], hover: HoverTextEnum.chocspread_sustainable },
+{ company: ["Vivani"], products: [], hover: HoverTextEnum.chocspread_sustainable },
+{ company: ["Nutella"], products: [], hover: HoverTextEnum.chocspread_sustainable },
+{ company: ["Cadbury"], products: ["Chocolate Spread"], hover: HoverTextEnum.chocspread_sustainable },
+{ company: ["Sainsbury's"], products: ["Chocolate Spread", "Caramel Spread", "Chocolate Swirl Spread"], hover: HoverTextEnum.chocspread_sustainable },
 //Waitrose, Co-op, M&S
 
 /******************************************************************************************************
@@ -216,54 +211,61 @@ Lidl,
 Iceland
 */
 // palm oil free
-{ company: "Divine", products: [], hover: HoverTextEnum.chocs_nopalm }, //After Dinner thins, Chocolate Bar Selection, Belgian Chocolate Collection
-{ company: "Booja Booja", products: [], hover: HoverTextEnum.chocs_nopalm },
-{ company: "Montezuma", products: [], hover: HoverTextEnum.chocs_nopalm },
-{ company: "Vivani", products: [], hover: HoverTextEnum.chocs_nopalm },
+{ company: ["Divine"], products: [], hover: HoverTextEnum.chocs_nopalm }, //After Dinner thins, Chocolate Bar Selection, Belgian Chocolate Collection
+{ company: ["Booja Booja"], products: [], hover: HoverTextEnum.chocs_nopalm },
+{ company: ["Montezuma"], products: [], hover: HoverTextEnum.chocs_nopalm },
+{ company: ["Vivani"], products: [], hover: HoverTextEnum.chocs_nopalm },
 //Co-op: 24 Assorted Chocolate Truffles, Chocolate Coins, Truly Irresistible Milk Chocolate Truffles gift cube, Truly Irresistible Mint Selection, Loved By Us Belgian Chocolate Pralines,  Loved By Us Irish Cream Liqueurs
 //M&S: Sequin Star/Tree with Truffles, Sparkling Wine Truffles, Dulce de Leche Truffles, Marc de Champagne Truffles, Mixologist's Box, Chocolate filled Christmas Crackers, Gastronomic Collection, Sparkling Caramels, Marzipan Collection, Italian Gianduiotto
 //Waitrose: Dark Chocolate Mint Creams, Dark Chocolate Mint Thins, Chocolate Mint Collection, Chocolate Ginger, Seriously Chocolatey milk chocolate truffles, Seriously Chocolatey Marc de Champagne dark truffles
-{ company: "Sainsbury's", products: ["After Dinner Mint Thins", "Dark Chocolate Orange Thins", "Taste the Difference Belgian Chocolate Cranberry and Pistachio Wreath", "Belgian Chocolate Seashells", "Taste the Difference Belgian Marzipan Assortment", "Crunchy Mint Sticks", "Crunchy Orange Sticks", "Milk Chocolate Brazils", "Milk Chocolate Honeycomb", "Taste the Difference Swiss Hazelnut Praline Truffles", "Taste the Difference Swiss Milk Choc Baubles", "Taste the Difference Swiss Milk Choc Tree Decorations"], hover: HoverTextEnum.chocs_nopalm },
-{ company: "Nestle", products: ["After Eight mints"], hover: HoverTextEnum.chocs_nopalm },
-{ company: "Terry's", products: ["Chocolate Orange Plain"], hover: HoverTextEnum.chocs_nopalm },
-{ company: "Toblerone", products: [], hover: HoverTextEnum.chocs_nopalm },
-{ company: "Guylian", products: ["Seashells", "Dark Chocolate Sea Horses", "Pearles d'Ocean tin"], hover: HoverTextEnum.chocs_nopalm },
-{ company: "Lindt", products: ["hello"], hover: HoverTextEnum.chocs_nopalm },
+{ company: ["Sainsbury's"], products: ["After Dinner Mint Thins", "Dark Chocolate Orange Thins", "Taste the Difference Belgian Chocolate Cranberry and Pistachio Wreath", "Belgian Chocolate Seashells", "Taste the Difference Belgian Marzipan Assortment", "Crunchy Mint Sticks", "Crunchy Orange Sticks", "Milk Chocolate Brazils", "Milk Chocolate Honeycomb", "Taste the Difference Swiss Hazelnut Praline Truffles", "Taste the Difference Swiss Milk Choc Baubles", "Taste the Difference Swiss Milk Choc Tree Decorations"], hover: HoverTextEnum.chocs_nopalm },
+{ company: ["Nestle"], products: ["After Eight mints"], hover: HoverTextEnum.chocs_nopalm },
+{ company: ["Terry's"], products: ["Chocolate Orange Plain"], hover: HoverTextEnum.chocs_nopalm },
+{ company: ["Toblerone"], products: [], hover: HoverTextEnum.chocs_nopalm },
+{ company: ["Guylian"], products: ["Seashells", "Dark Chocolate Sea Horses", "Pearles d'Ocean tin"], hover: HoverTextEnum.chocs_nopalm },
+{ company: ["Lindt"], products: ["hello"], hover: HoverTextEnum.chocs_nopalm },
 
-{ company: "Cocoa Loco", products: [], hover: HoverTextEnum.chocs_organic },
-{ company: "Ferrero Rocher", products: [], hover: HoverTextEnum.chocs_sustainable },
-{ company: "Raffaello", products: [], hover: HoverTextEnum.chocs_sustainable },
+{ company: ["Cocoa Loco"], products: [], hover: HoverTextEnum.chocs_organic },
+{ company: ["Ferrero Rocher"], products: [], hover: HoverTextEnum.chocs_sustainable },
+{ company: ["Raffaello"], products: [], hover: HoverTextEnum.chocs_sustainable },
 //Nestle brands
-{ company: "After Eight", products: [], hover: HoverTextEnum.chocs_sustainable },
-{ company: "Black Magic", products: [], hover: HoverTextEnum.chocs_sustainable },
-{ company: "Dairy Box", products: [], hover: HoverTextEnum.chocs_sustainable },
-{ company: "Quality Street", products: [], hover: HoverTextEnum.chocs_sustainable },
+{ company: ["After Eight"], products: [], hover: HoverTextEnum.chocs_sustainable },
+{ company: ["Black Magic"], products: [], hover: HoverTextEnum.chocs_sustainable },
+{ company: ["Dairy Box"], products: [], hover: HoverTextEnum.chocs_sustainable },
+{ company: ["Quality Street"], products: [], hover: HoverTextEnum.chocs_sustainable },
 //Mondelez brands
-{ company: "Green & Black's", products: [], hover: HoverTextEnum.chocs_sustainable },
-{ company: "Cadbury", products: ["Milk Tray", "Roses", "Heroes"], hover: HoverTextEnum.chocs_sustainable },
-{ company: "Terry's", products: ["Chocolate Orange", "All Gold"], hover: HoverTextEnum.chocs_sustainable },
-{ company: "Toblerone", products: [], hover: HoverTextEnum.chocs_sustainable },
-{ company: "Celebrations", products: ["240g", "Mini Pack"], hover: HoverTextEnum.chocs_sustainable }, // to avoid grabbing all things with celebbrations in the title!
-{ company: "Lindt", products: ["Lindor"], hover: HoverTextEnum.chocs_sustainable }
+{ company: ["Green & Black's"], products: [], hover: HoverTextEnum.chocs_sustainable },
+{ company: ["Cadbury"], products: ["Milk Tray", "Roses", "Heroes"], hover: HoverTextEnum.chocs_sustainable },
+{ company: ["Terry's"], products: ["Chocolate Orange", "All Gold"], hover: HoverTextEnum.chocs_sustainable },
+{ company: ["Toblerone"], products: [], hover: HoverTextEnum.chocs_sustainable },
+{ company: ["Celebrations"], products: ["240g", "Mini Pack"], hover: HoverTextEnum.chocs_sustainable }, // to avoid grabbing all things with celebbrations in the title!
+{ company: ["Lindt"], products: ["Lindor"], hover: HoverTextEnum.chocs_sustainable }
 //Waitrose,Co-op,M&S,Sainsbury's
 
 ];
 
 var gBadProducts = [
-{ company: "Sainsbury's", products: ["Shortbread Fingers, Basics"], hover: HoverTextEnum.biscuits_bad }, 
+{ company: ["Sainsbury's"], products: ["Shortbread Fingers, Basics"], hover: HoverTextEnum.biscuits_bad }, 
+{ company: ["Tesco"], products: ["Biscuits","Mini Shortbread Bites",], hover: HoverTextEnum.biscuits_bad },
 
 // pet food
-{ company: "Applaws", products: [], hover: HoverTextEnum.petfood_bad }, 
-{ company: "Encore", products: ["Cat","Kitten","Puppy","Dog","Chicken","Selection","Salmon"], hover: HoverTextEnum.petfood_bad }, 
-{ company: "Butcher's", products: ["Tripe", "Recipes Variety","Jelly","Country Stews","Lean & Tasty","Choice Senior","Meaty Stews","Choice Chicken","Succulent Feasts","Puppy","Superior Chunks","Simply Gentle","Choice, Superior"], hover: HoverTextEnum.petfood_bad }, 
-{ company: "HiLife", products: [], hover: HoverTextEnum.petfood_bad }, 
-{ company: "Eukanuba", products: [], hover: HoverTextEnum.petfood_bad }, 
-{ company: "Iams", products: [], hover: HoverTextEnum.petfood_bad }, 
+{ company: ["Applaws"], products: [], hover: HoverTextEnum.petfood_bad }, 
+{ company: ["Encore"], products: ["Cat","Kitten","Puppy","Dog","Chicken","Selection","Salmon"], hover: HoverTextEnum.petfood_bad }, 
+{ company: ["Butcher's","Butchers"], products: ["Tripe", "Recipes Variety","Jelly","Country Stews","Lean & Tasty","Lean And Tasty","Choice Senior","Meaty Stews","Choice Chicken","Succulent Feasts","Puppy","Superior Chunks","Simply Gentle","Choice, Superior","Original Recipes","Classic Meat Variety","Classic Fish Variety","Meaty Stew Selection","Rustic Feasts","Supreme Feasts","Choice Beef 150G"], hover: HoverTextEnum.petfood_bad }, 
+{ company: ["Classic Fish Variety"], products: [], hover: HoverTextEnum.petfood_bad }, // tesco doesn't put Butcher's in the text for this one :(
+{ company: ["Classic Mixed Variety"], products: [], hover: HoverTextEnum.petfood_bad }, // tesco doesn't put Butcher's in the text for this one :(
+{ company: ["HiLife"], products: [], hover: HoverTextEnum.petfood_bad }, 
+{ company: ["Eukanuba"], products: [], hover: HoverTextEnum.petfood_bad }, 
+{ company: ["Iams"], products: [], hover: HoverTextEnum.petfood_bad }, 
 //Tesco, Morrisons, ASDA, Aldi, Lidl
 
+{ company: ["Tesco"], products: ["Chocolate Spread"], hover: HoverTextEnum.chocspread_bad },
+
+
 //Boxes of chocolates and gift chocolates
-{ company: "Thorntons", products: [], hover: HoverTextEnum.chocs_bad }, 
-{ company: "Elizabeth Shaw", products: [], hover: HoverTextEnum.chocs_bad }
+{ company: ["Thorntons"], products: [], hover: HoverTextEnum.chocs_bad }, 
+{ company: ["Elizabeth Shaw"], products: [], hover: HoverTextEnum.chocs_bad },
+{ company: ["Tesco"], products: ["Swiss Chocolate Collection","Finest Swiss Chocolate Orange","Chocolate Malted Milk Biscuits","Chocolate Chip Cookies"], hover: HoverTextEnum.chocs_bad }
 //ASDA,Morrisons,Tesco,Aldi,Lidl,Iceland 
   
 ];

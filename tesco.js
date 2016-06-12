@@ -1,19 +1,17 @@
 
 
-
 function SetItemBackgrounds() {
     // search results or multiple results
-    var products = $('.gridItem');
+    var products = $('.product');
     products.each(function(){
         // grab the brand text from the label
-        var brandname = $(this).find(".productNameAndPromotions").text();
-
+        var brandname = $(this).find("[data-title='true']").text();
         SetBackground(brandname, $(this));
     });
 
     // product details for one product
-    var pdp = $('.productSummary');
-    var product = pdp.find('.productTitleDescriptionContainer');
+    var pdp = $('.descriptionDetails');
+    var product = pdp.find('.desc');
     if(pdp && product) {
         SetBackground(product.text(), pdp);
     }
