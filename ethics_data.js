@@ -254,9 +254,9 @@ var gBadProducts = [
 
 // pet food
 { company: "Applaws", products: [], hover: HoverTextEnum.petfood_bad }, 
-{ company: "Encore", products: [], hover: HoverTextEnum.petfood_bad }, 
-{ company: "Butcher's", products: [], hover: HoverTextEnum.petfood_bad }, 
-{ company: "Hi-Life", products: [], hover: HoverTextEnum.petfood_bad }, 
+{ company: "Encore", products: ["Cat","Kitten","Puppy","Dog","Chicken","Selection","Salmon"], hover: HoverTextEnum.petfood_bad }, 
+{ company: "Butcher's", products: ["Tripe", "Recipes Variety","Jelly","Country Stews","Lean & Tasty","Choice Senior","Meaty Stews","Choice Chicken","Succulent Feasts","Puppy","Superior Chunks","Simply Gentle","Choice, Superior"], hover: HoverTextEnum.petfood_bad }, 
+{ company: "HiLife", products: [], hover: HoverTextEnum.petfood_bad }, 
 { company: "Eukanuba", products: [], hover: HoverTextEnum.petfood_bad }, 
 { company: "Iams", products: [], hover: HoverTextEnum.petfood_bad }, 
 //Tesco, Morrisons, ASDA, Aldi, Lidl
