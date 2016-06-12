@@ -36,7 +36,7 @@ function TitleContainsACompany(title, companies) {
 }
 
 function GetHoverText(product) {
-    return product.company + product.hover;
+    return product.company[0] + product.hover;
 }
 
 function SetBackground(brandname, div) {

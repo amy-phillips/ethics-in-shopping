@@ -99,7 +99,7 @@ Applaws, Encore, Butcher's, Hi-Life, Eukanuba, Iams, Tesco, Morrisons, ASDA, Ald
 { company: ["Ami"], products: [], hover: HoverTextEnum.petfood_nopalm },
 { company: ["Benevo"], products: [], hover: HoverTextEnum.petfood_nopalm },
 { company: ["Yarrah"], products: [], hover: HoverTextEnum.petfood_nopalm },
-{ company: ["Burns"], products: [], hover: HoverTextEnum.petfood_nopalm },
+//{ company: ["Burns"], products: [], hover: HoverTextEnum.petfood_nopalm },
 { company: ["Meowing Heads"], products: [], hover: HoverTextEnum.petfood_nopalm },
 { company: ["Harringtons"], products: [], hover: HoverTextEnum.petfood_nopalm },
 { company: ["Wagg"], products: [], hover: HoverTextEnum.petfood_nopalm },
@@ -110,8 +110,8 @@ Applaws, Encore, Butcher's, Hi-Life, Eukanuba, Iams, Tesco, Morrisons, ASDA, Ald
 { company: ["Felix"], products: [], hover: HoverTextEnum.petfood_sustainable },
 { company: ["Go-Cat"], products: [], hover: HoverTextEnum.petfood_sustainable },
 { company: ["Purina"], products: [], hover: HoverTextEnum.petfood_sustainable },
-{ company: ["Gourmet"], products: [], hover: HoverTextEnum.petfood_sustainable },
-{ company: ["Bakers"], products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: ["Gourmet"], products: ["Gold","Perle","Mon Petit","Solitaire"], hover: HoverTextEnum.petfood_sustainable },
+{ company: ["Bakers"], products: ["Dog","Sizzlers","Allsorts","Rewards","Meat","Beef","Chicken","Duck","Heart","Liver","As Good As It Looks","Whirlers","Bones","Select Menus"], hover: HoverTextEnum.petfood_sustainable },
 { company: ["Bonio"], products: [], hover: HoverTextEnum.petfood_sustainable },
 { company: ["Winalot"], products: [], hover: HoverTextEnum.petfood_sustainable },
 { company: ["Whiskas"], products: [], hover: HoverTextEnum.petfood_sustainable },
@@ -119,7 +119,7 @@ Applaws, Encore, Butcher's, Hi-Life, Eukanuba, Iams, Tesco, Morrisons, ASDA, Ald
 { company: ["Kitekat"], products: [], hover: HoverTextEnum.petfood_sustainable },
 { company: ["James Wellbeloved"], products: [], hover: HoverTextEnum.petfood_sustainable },
 { company: ["Royal Canin"], products: [], hover: HoverTextEnum.petfood_sustainable },
-{ company: ["Pal"], products: [], hover: HoverTextEnum.petfood_sustainable },
+//{ company: ["Pal"], products: [], hover: HoverTextEnum.petfood_sustainable },
 { company: ["Pedigree"], products: [], hover: HoverTextEnum.petfood_sustainable },
 { company: ["Cesar"], products: [], hover: HoverTextEnum.petfood_sustainable },
 { company: ["Chappie"], products: [], hover: HoverTextEnum.petfood_sustainable },
@@ -156,7 +156,7 @@ Waitrose Seriously Chocolatey
 Best company rating for palm oil:
 Use certified sustainable palm oil - Essential (Fairtrade & organic), Plamil (organic & vegan), Biona (organic), Traidcraft (FairPalm), Vivani (organic), Nutella, Cadbury, Sainsbury's, Waitrose, Co-op, M&S
 */
-{ company: ["Essential"], products: [], hover: HoverTextEnum.chocspread_sustainable },
+//{ company: ["Essential"], products: [], hover: HoverTextEnum.chocspread_sustainable },
 { company: ["Plamil"], products: [], hover: HoverTextEnum.chocspread_sustainable },
 { company: ["Biona"], products: [], hover: HoverTextEnum.chocspread_sustainable },
 { company: ["Traidcraft"], products: [], hover: HoverTextEnum.chocspread_sustainable },
@@ -234,12 +234,12 @@ Iceland
 { company: ["Dairy Box"], products: [], hover: HoverTextEnum.chocs_sustainable },
 { company: ["Quality Street"], products: [], hover: HoverTextEnum.chocs_sustainable },
 //Mondelez brands
-{ company: ["Green & Black's"], products: [], hover: HoverTextEnum.chocs_sustainable },
-{ company: ["Cadbury"], products: ["Milk Tray", "Roses", "Heroes"], hover: HoverTextEnum.chocs_sustainable },
-{ company: ["Terry's"], products: ["Chocolate Orange", "All Gold"], hover: HoverTextEnum.chocs_sustainable },
-{ company: ["Toblerone"], products: [], hover: HoverTextEnum.chocs_sustainable },
+{ company: ["Green & Black's","Green & Blacks","Green And Black's","Green And Blacks"], products: [], hover: HoverTextEnum.chocs_sustainable },
+{ company: ["Green And Black"], products: ["Milk Cooks Bar","Organic Milk Thins","Butterscotch Milk Chocolate","Organic Salted Caramel","Organic Cooking Chocolate","70%Dark Thins"], hover: HoverTextEnum.chocs_sustainable },
+{ company: ["Cadbury"], products: [], hover: HoverTextEnum.chocs_sustainable },
+{ company: ["Terry's","Terrys"], products: ["Chocolate Orange", "All Gold"], hover: HoverTextEnum.chocs_sustainable },
 { company: ["Celebrations"], products: ["240g", "Mini Pack"], hover: HoverTextEnum.chocs_sustainable }, // to avoid grabbing all things with celebbrations in the title!
-{ company: ["Lindt"], products: ["Lindor"], hover: HoverTextEnum.chocs_sustainable }
+{ company: ["Lindt"], products: [], hover: HoverTextEnum.chocs_sustainable }
 //Waitrose,Co-op,M&S,Sainsbury's
 
 ];
@@ -250,13 +250,15 @@ var gBadProducts = [
 
 // pet food
 { company: ["Applaws"], products: [], hover: HoverTextEnum.petfood_bad }, 
-{ company: ["Encore"], products: ["Cat","Kitten","Puppy","Dog","Chicken","Selection","Salmon"], hover: HoverTextEnum.petfood_bad }, 
+{ company: ["Encore"], products: ["Cat","Kitten","Puppy","Dog","Chicken","Selection","Salmon","Tuna","Mackerel","Multipack Pouch"], hover: HoverTextEnum.petfood_bad }, 
 { company: ["Butcher's","Butchers"], products: ["Tripe", "Recipes Variety","Jelly","Country Stews","Lean & Tasty","Lean And Tasty","Choice Senior","Meaty Stews","Choice Chicken","Succulent Feasts","Puppy","Superior Chunks","Simply Gentle","Choice, Superior","Original Recipes","Classic Meat Variety","Classic Fish Variety","Meaty Stew Selection","Rustic Feasts","Supreme Feasts","Choice Beef 150G"], hover: HoverTextEnum.petfood_bad }, 
 { company: ["Classic Fish Variety"], products: [], hover: HoverTextEnum.petfood_bad }, // tesco doesn't put Butcher's in the text for this one :(
 { company: ["Classic Mixed Variety"], products: [], hover: HoverTextEnum.petfood_bad }, // tesco doesn't put Butcher's in the text for this one :(
-{ company: ["HiLife"], products: [], hover: HoverTextEnum.petfood_bad }, 
+{ company: ["HiLife","Hi Life","Hilife"], products: [], hover: HoverTextEnum.petfood_bad }, 
 { company: ["Eukanuba"], products: [], hover: HoverTextEnum.petfood_bad }, 
 { company: ["Iams"], products: [], hover: HoverTextEnum.petfood_bad }, 
+{ company: ["Tesco"], products: ["Cat Pouches","Cat Sticks","Cat Can Cuts","Cat Food","Cats Choice","Cat Treats","Treats For Cats","Cat In Cuts","Cat Chunks"], hover: HoverTextEnum.petfood_bad },
+{ company: ["Tesco"], products: ["Dog Chunks","Dog Chunk","Dog Healthy","Dog Food","Dog Mixer","Dog Supermeat","Dog Treat","Treats For Dogs","Complete Worker Dog","Meaty Strips For Dogs","Dental Sticks","Filled Log Bone","Meaty Roll","Rich In Chicken Treats"], hover: HoverTextEnum.petfood_bad },
 //Tesco, Morrisons, ASDA, Aldi, Lidl
 
 { company: ["Tesco"], products: ["Chocolate Spread"], hover: HoverTextEnum.chocspread_bad },
