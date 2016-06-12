@@ -2,141 +2,268 @@
 // - TODO update this to use data from the database at http://www.corporatecritic.org/
 
 
+HoverTextEnum = {
+    biscuits_nopalm : ' is palm oil free.  For more details click the extension icon in the top right of your browser and follow the link to the Ethical Consumer website',
+    biscuits_organic : ' uses organic palm oil.  For more details click the extension icon in the top right of your browser and follow the link to the Ethical Consumer website',
+    biscuits_fairpalm : ' uses FairPalm palm oil.  For more details click the extension icon in the top right of your browser and follow the link to the Ethical Consumer website',
+    biscuits_sustainable : ' uses sustainable palm oil.  For more details click the extension icon in the top right of your browser and follow the link to the Ethical Consumer website',
+    biscuits_bad : ' uses unsustainable palm oil.  For more details and a list of more ethical alternatives click the extension icon in the top right of your browser and follow the link to the Ethical Consumer website',
+    
+    petfood_nopalm : ' is palm oil free.  For more details click the extension icon in the top right of your browser and follow the link to the Ethical Consumer website',
+    petfood_sustainable : ' uses sustainable palm oil.  For more details click the extension icon in the top right of your browser and follow the link to the Ethical Consumer website',
+    petfood_bad : ' uses unsustainable palm oil.  For more details and a list of more ethical alternatives click the extension icon in the top right of your browser and follow the link to the Ethical Consumer website',
+
+    nutbutter_nopalm : ' is palm oil free.  For more details click the extension icon in the top right of your browser and follow the link to the Ethical Consumer website',
+    nutbutter_sustainable : ' uses sustainable palm oil.  For more details click the extension icon in the top right of your browser and follow the link to the Ethical Consumer website',
+
+    chocspread_nopalm : ' is palm oil free.  For more details click the extension icon in the top right of your browser and follow the link to the Ethical Consumer website',
+    chocspread_sustainable : ' uses sustainable palm oil.  For more details click the extension icon in the top right of your browser and follow the link to the Ethical Consumer website',
+
+    chocs_nopalm : ' is palm oil free.  For more details click the extension icon in the top right of your browser and follow the link to the Ethical Consumer website',
+    chocs_sustainable : ' uses sustainable palm oil.  For more details click the extension icon in the top right of your browser and follow the link to the Ethical Consumer website',
+    chocs_organic : ' uses organic palm oil.  For more details click the extension icon in the top right of your browser and follow the link to the Ethical Consumer website',
+    chocs_bad : ' uses unsustainable palm oil.  For more details and a list of more ethical alternatives click the extension icon in the top right of your browser and follow the link to the Ethical Consumer website',
+
+}
 
 var gGoodProducts = [
-// biscuits
-{ company: "Island Bakery", products: [] },
+/******************************************************************************************************
+Biscuits
+ 
+Palm oil free biscuits:
+Most likely those biscuits that are 'all butter' or more expensive 'cookies'.
+Island Bakery (all organic): all biscuits; 
+Waitrose Duchy Organic (all organic):  all biscuits
+Co-op: All Butter Shortbread Fingers, Jaffa Cakes, Truly Irresistible Cookies
+Bahlsen: Choco Leibniz Dark, Milk, Chocolate Orange; Butter Biscuits; 
+Walkers: Shortbread, All Butter Sultana Biscuits, Chocolate Chip; 
+Waitrose: All Butter Cookies, Milk Chocolate & Chocolate Chip Cookies, Scottish Shortbread, Belgian dark chocolate thins, Viennese swirls & fingers, Seriously shortbread, Seriously chocolate and ginger biscuits, Seriously triple chocolate, Continental milk chocolate butter biscuits, Continental dark chocolate butter biscuits
+McVitie's: Rich Tea, Digestives Light; 
+Sainsbury's: Shortbread (except Basics), Taste the Difference Cookies, SO Organic chocolate chip cookies, SO Organic dark chocolate orange, Flapjack Cookies, Jaffa Cakes, Almond Cantuccini
+M&S: Shortbread Rounds & Fingers, All Butter Dunkers, All Butter Cookies, All Butter Biscuits, All Butter Battenberg Squares, Viennese Swirls, Viennese Chocolate Dipped Fingers, Roly Poly Swirls, Mini Oat, Belgian Chocolate Chunk Cookies
+ 
+Best company rating for palm oil:
+Palm oil free company - Island Bakery
+Use organic palm oil - Against the Grain, Biona, Doves Farm, Duchy Originals
+Use FairPalm - Traidcraft
+Use certified sustainable palm oil - Nairn's, Bahlsen, Walkers, Hill Biscuits, M&S, Co-op, Sainsbury's, Waitrose, Burton's Biscuits, Mrs Crimble's, Crawfords, McVities, Oreo, Cadbury's 
+ 
+Worst company rating for palm oil:
+ASDA, Morrisons, Tesco, Aldi, Lidl, Iceland
+*/
+{ company: "Island Bakery", products: [], hover: HoverTextEnum.biscuits_nopalm },
 //Waitrose Duchy Organic all biscuits
 //Co-op: All Butter Shortbread Fingers, Jaffa Cakes, Truly Irresistible Cookies
-{ company: "Bahlsen", products: ["Choco Leibniz Biscuits"] }, 
-{ company: "Walkers", products: ["Shortbread"] }, 
-{ company: "Walkers", products: ["All Butter Sultana Biscuits"] },
-{ company: "Walkers", products: ["Chocolate Chip"] },
+{ company: "Bahlsen", products: ["Choco Leibniz Biscuits"], hover: HoverTextEnum.biscuits_nopalm }, 
+{ company: "Walkers", products: ["Shortbread"], hover: HoverTextEnum.biscuits_nopalm }, 
+{ company: "Walkers", products: ["All Butter Sultana Biscuits"], hover: HoverTextEnum.biscuits_nopalm },
+{ company: "Walkers", products: ["Chocolate Chip"], hover: HoverTextEnum.biscuits_nopalm },
 //Waitrose: All Butter Cookies, Milk Chocolate & Chocolate Chip Cookies, Scottish Shortbread, Belgian dark chocolate thins, Viennese swirls & fingers, Seriously shortbread, Seriously chocolate and ginger biscuits, Seriously triple chocolate, Continental milk chocolate butter biscuits, Continental dark chocolate butter biscuits
-{ company: "McVitie's", products: ["Rich Tea"] },
-{ company: "Mcvitie's", products: ["Light Rich Tea"] },
-{ company: "McVitie's", products: ["Light Digestive Biscuits"] },
-{ company: "Sainsbury's", products: ["Shortbread"] }, // (except Basics) see BadProducts
-{ company: "Sainsbury's", products: ["Cookies, Taste the Difference", "Cookies"] },
-{ company: "Sainsbury's Cookies", products: ["Taste the Difference"] }, // these two entries should cover all taste the diff cookies
-{ company: "Sainsbury's", products: ["SO Organic chocolate chip cookies","SO Organic dark chocolate orange","Flapjack Cookies","Jaffa Cakes","Almond Cantuccini"] }, 
+{ company: "McVitie's", products: ["Rich Tea"], hover: HoverTextEnum.biscuits_nopalm },
+{ company: "Mcvitie's", products: ["Light Rich Tea"], hover: HoverTextEnum.biscuits_nopalm },
+{ company: "McVitie's", products: ["Light Digestive Biscuits"], hover: HoverTextEnum.biscuits_nopalm },
+{ company: "Sainsbury's", products: ["Shortbread"], hover: HoverTextEnum.biscuits_nopalm }, // (except Basics) see BadProducts
+{ company: "Sainsbury's", products: ["Cookies, Taste the Difference", "Cookies"], hover: HoverTextEnum.biscuits_nopalm },
+{ company: "Sainsbury's Cookies", products: ["Taste the Difference"], hover: HoverTextEnum.biscuits_nopalm }, // these two entries should cover all taste the diff cookies
+{ company: "Sainsbury's", products: ["SO Organic chocolate chip cookies","SO Organic dark chocolate orange","Flapjack Cookies","Jaffa Cakes","Almond Cantuccini"], hover: HoverTextEnum.biscuits_nopalm }, 
 //M&S: Shortbread Rounds & Fingers, All Butter Dunkers, All Butter Cookies, All Butter Biscuits, All Butter Battenberg Squares, Viennese Swirls, Viennese Chocolate Dipped Fingers, Roly Poly Swirls, Mini Oat, Belgian Chocolate Chunk Cookies
 
+//Use organic palm oil -
+{ company: "Against the Grain", products: [], hover: HoverTextEnum.biscuits_organic },
+{ company: "Biona", products: [], hover: HoverTextEnum.biscuits_organic },
+{ company: "Doves Farm", products: [], hover: HoverTextEnum.biscuits_organic },
+{ company: "Duchy Originals", products: [], hover: HoverTextEnum.biscuits_organic },
+
+//Use FairPalm - Traidcraft
+{ company: "Traidcraft", products: [], hover: HoverTextEnum.biscuits_fairpalm },
+
 //Use certified sustainable palm oil - 
-{ company: "Nairn's", products: ["Oatcake","Biscuit"] },
-{ company: "Bahlsen", products: ["Biscuit"] },
-{ company: "Walkers", products: ["Biscuit"] },
-{ company: "Hill Biscuits", products: [] },
-{ company: "Burton's Biscuits", products: [] },
-{ company: "Mrs Crimble's", products: ["Macaroon","Bakewell"] },
-{ company: "Mrs. Crimble's", products: ["Macaroon","Bakewell"] },
-{ company: "Crawfords", products: ["Biscuit"] },
-{ company: "McVitie's", products: ["Biscuit","Digestive","Biscuits","Digestives"] },
-{ company: "Oreo", products: ["Biscuit"] },
-{ company: "Cadbury", products: ["Biscuit"] },
-{ company: "Sainsbury's", products: ["Biscuit","Digestive","Biscuits","Digestives"] },
+{ company: "Nairn's", products: ["Oatcake","Biscuit"], hover: HoverTextEnum.biscuits_sustainable },
+{ company: "Bahlsen", products: ["Biscuit"], hover: HoverTextEnum.biscuits_sustainable },
+{ company: "Walkers", products: ["Biscuit"], hover: HoverTextEnum.biscuits_sustainable },
+{ company: "Hill Biscuits", products: [], hover: HoverTextEnum.biscuits_sustainable },
+{ company: "Burton's Biscuits", products: [], hover: HoverTextEnum.biscuits_sustainable },
+{ company: "Mrs Crimble's", products: ["Macaroon","Bakewell"], hover: HoverTextEnum.biscuits_sustainable },
+{ company: "Mrs. Crimble's", products: ["Macaroon","Bakewell"], hover: HoverTextEnum.biscuits_sustainable },
+{ company: "Crawfords", products: ["Biscuit"], hover: HoverTextEnum.biscuits_sustainable },
+{ company: "McVitie's", products: ["Biscuit","Digestive","Biscuits","Digestives"], hover: HoverTextEnum.biscuits_sustainable },
+{ company: "Oreo", products: ["Biscuit"], hover: HoverTextEnum.biscuits_sustainable },
+{ company: "Cadbury", products: ["Biscuit"], hover: HoverTextEnum.biscuits_sustainable },
+{ company: "Sainsbury's", products: ["Biscuit","Digestive","Biscuits","Digestives"], hover: HoverTextEnum.biscuits_sustainable },
 
-// pet food - palm oil free
-{ company: "Ami", products: [] },
-{ company: "Benevo", products: [] },
-{ company: "Yarrah", products: [] },
-{ company: "Burns", products: [] },
-{ company: "Meowing Heads", products: [] },
-{ company: "Harringtons", products: [] },
-{ company: "Wagg", products: [] },
-{ company: "Barking Heads", products: [] },
-{ company: "V-Dog", products: [] },
-
-// pet food - Use certified sustainable palm oil
-{ company: "Hill’s", products: [] },
-{ company: "Felix", products: [] },
-{ company: "Go-Cat", products: [] },
-{ company: "Purina", products: [] },
-{ company: "Gourmet", products: [] },
-{ company: "Bakers", products: [] },
-{ company: "Bonio", products: [] },
-{ company: "Winalot", products: [] },
-{ company: "Whiskas", products: [] },
-{ company: "Sheba", products: [] },
-{ company: "Kitekat", products: [] },
-{ company: "James Wellbeloved", products: [] },
-{ company: "Royal Canin", products: [] },
-{ company: "Pal", products: [] },
-{ company: "Pedigree", products: [] },
-{ company: "Cesar", products: [] },
-{ company: "Chappie", products: [] },
-//{ company: "Sainsbury's", products: [] }, // hmm read out category?
+/******************************************************************************************************
+Pet food
  
-// nut butters
-{ company: "Essential", products: [] },
-{ company: "Biona", products: [] },
-{ company: "Suma", products: [] },
-{ company: "Meridian", products: [] },
-{ company: "Whole Earth", products: [] },
-{ company: "Sun Pat", products: [] }, // uses peanut oil
+Best company rating for palm oil:
+Palm oil free company - Ami, Benevo, Yarrah, Burns, Meowing Heads, Harringtons, Wagg, Barking Heads, V-Dog
+Use certified sustainable palm oil - Hill’s, Nestlé Purina brands (Felix, Go-Cat, Purina, Gourmet, Bakers, Bonio, Winalot), Mars brands (Whiskas, Sheba, Kitekat, James Wellbeloved, Royal Canin, Pal, Pedigree, Cesar, Chappie), Sainsbury's, Waitrose, the Co-op
+ 
+Worst company rating for palm oil:
+Applaws, Encore, Butcher's, Hi-Life, Eukanuba, Iams, Tesco, Morrisons, ASDA, Aldi, Lidl
+ */
+{ company: "Ami", products: [], hover: HoverTextEnum.petfood_nopalm },
+{ company: "Benevo", products: [], hover: HoverTextEnum.petfood_nopalm },
+{ company: "Yarrah", products: [], hover: HoverTextEnum.petfood_nopalm },
+{ company: "Burns", products: [], hover: HoverTextEnum.petfood_nopalm },
+{ company: "Meowing Heads", products: [], hover: HoverTextEnum.petfood_nopalm },
+{ company: "Harringtons", products: [], hover: HoverTextEnum.petfood_nopalm },
+{ company: "Wagg", products: [], hover: HoverTextEnum.petfood_nopalm },
+{ company: "Barking Heads", products: [], hover: HoverTextEnum.petfood_nopalm },
+{ company: "V-Dog", products: [], hover: HoverTextEnum.petfood_nopalm },
 
-// chocolate spread
-// Waitrose Seriously Chocolatey
-// Use certified sustainable palm oil - 
-{ company: "Essential", products: [] },
-{ company: "Plamil", products: [] },
-{ company: "Biona", products: [] },
-{ company: "Traidcraft", products: [] },
-{ company: "Vivani", products: [] },
-{ company: "Nutella", products: [] },
-{ company: "Cadbury", products: ["Chocolate Spread"] },
-{ company: "Sainsbury's", products: ["Chocolate Spread", "Caramel Spread", "Chocolate Swirl Spread"] },
+{ company: "Hill’s", products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: "Felix", products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: "Go-Cat", products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: "Purina", products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: "Gourmet", products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: "Bakers", products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: "Bonio", products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: "Winalot", products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: "Whiskas", products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: "Sheba", products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: "Kitekat", products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: "James Wellbeloved", products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: "Royal Canin", products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: "Pal", products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: "Pedigree", products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: "Cesar", products: [], hover: HoverTextEnum.petfood_sustainable },
+{ company: "Chappie", products: [], hover: HoverTextEnum.petfood_sustainable },
+//{ company: "Sainsbury's", products: [] }, // hmm read out category?  TODO
+ 
+/******************************************************************************************************
+Palm oil free nut butters:
+Essential (organic): all
+Biona (organic): all
+Suma (organic): all
+Meridian: all, some organic
+Whole Earth: 100% Peanuts organic
+ 
+Best company rating for palm oil:
+Palm oil free company - Meridian
+Use certified sustainable palm oil - Essential (organic), Biona (organic), Suma, Whole Earth, Sainsbury's, Waitrose, Co-op, M&S
+*/
+{ company: "Essential", products: [], hover: HoverTextEnum.nutbutter_nopalm },
+{ company: "Biona", products: [], hover: HoverTextEnum.nutbutter_nopalm },
+{ company: "Suma", products: [], hover: HoverTextEnum.nutbutter_nopalm },
+{ company: "Meridian", products: [], hover: HoverTextEnum.nutbutter_nopalm },
+{ company: "Whole Earth", products: [], hover: HoverTextEnum.nutbutter_nopalm },
+{ company: "Sun Pat", products: [], hover: HoverTextEnum.nutbutter_nopalm }, // uses peanut oil
+
+{ company: "Sainsbury's", products: ["Peanut Butter"], hover: HoverTextEnum.nutbutter_sustainable },
+
+/******************************************************************************************************
+Chocolate spread
+ 
+Palm oil free chocolate spreads:
+Very hard to find.
+Waitrose Seriously Chocolatey
+ 
+Best company rating for palm oil:
+Use certified sustainable palm oil - Essential (Fairtrade & organic), Plamil (organic & vegan), Biona (organic), Traidcraft (FairPalm), Vivani (organic), Nutella, Cadbury, Sainsbury's, Waitrose, Co-op, M&S
+*/
+{ company: "Essential", products: [], hover: HoverTextEnum.chocspread_sustainable },
+{ company: "Plamil", products: [], hover: HoverTextEnum.chocspread_sustainable },
+{ company: "Biona", products: [], hover: HoverTextEnum.chocspread_sustainable },
+{ company: "Traidcraft", products: [], hover: HoverTextEnum.chocspread_sustainable },
+{ company: "Vivani", products: [], hover: HoverTextEnum.chocspread_sustainable },
+{ company: "Nutella", products: [], hover: HoverTextEnum.chocspread_sustainable },
+{ company: "Cadbury", products: ["Chocolate Spread"], hover: HoverTextEnum.chocspread_sustainable },
+{ company: "Sainsbury's", products: ["Chocolate Spread", "Caramel Spread", "Chocolate Swirl Spread"], hover: HoverTextEnum.chocspread_sustainable },
 //Waitrose, Co-op, M&S
 
-//Boxes of chocolates and gift chocolates
-{ company: "Divine", products: [] }, //After Dinner thins, Chocolate Bar Selection, Belgian Chocolate Collection
-{ company: "Booja Booja", products: [] },
-{ company: "Montezuma", products: [] },
-{ company: "Vivani", products: [] },
+/******************************************************************************************************
+Boxes of chocolates and gift chocolates
+ 
+Palm oil free boxes of chocolates:
+Divine (Fairtrade): all chocolate (After Dinner thins, Chocolate Bar Selection, Belgian Chocolate Collection) - go to online shop >
+Booja Booja (organic & vegan): all chocolate (truffles)
+Montezuma (organic): all gift chocolate - go to online shop >
+Vivani (organic): all gift chocolate (mini bars gift tins)
+Co-op: 24 Assorted Chocolate Truffles, Chocolate Coins, Truly Irresistible Milk Chocolate Truffles gift cube, Truly Irresistible Mint Selection, Loved By Us Belgian Chocolate Pralines,  Loved By Us Irish Cream Liqueurs
+M&S: Sequin Star/Tree with Truffles, Sparkling Wine Truffles, Dulce de Leche Truffles, Marc de Champagne Truffles, Mixologist's Box, Chocolate filled Christmas Crackers, Gastronomic Collection, Sparkling Caramels, Marzipan Collection, Italian Gianduiotto
+Waitrose: Dark Chocolate Mint Creams, Dark Chocolate Mint Thins, Chocolate Mint Collection, Chocolate Ginger, Seriously Chocolatey milk chocolate truffles, Seriously Chocolatey Marc de Champagne dark truffles
+Sainsbury's: After Dinner Mint Thins, Dark Chocolate Orange Thins, Taste the Difference Belgian Chocolate Cranberry and Pistachio Wreath, Belgian Chocolate Seashells, Taste the Difference Belgian Marzipan Assortment, Crunchy Mint Sticks, Crunchy Orange Sticks, Milk Chocolate Brazils, Milk Chocolate Honeycomb, Taste the Difference Swiss Hazelnut Praline Truffles, Taste the Difference Swiss Milk Choc Baubles, Taste the Difference Swiss Milk Choc Tree Decorations
+Nestle: After Eight mints
+Mondelez: Terry's Chocolate Orange Plain, Toblerone (all varieties)
+Guylian: Seashells, Dark Chocolate Sea Horses, Pearles d'Ocean tin
+Lindt: HELLO Just for You
+
+Best company rating for palm oil:
+Booja Booja (organic, palm oil free company),
+Divine (Fairtrade, palm oil free company),
+Cocoa Loco (organic),
+Montezuma (organic),
+Vivani (organic),
+Ferrero Rocher, Raffaello,
+Nestle brands (After Eight, Black Magic, Dairy Box, Quality Street),
+Mondelez brands (Green & Black's Organic Collection, Milk Tray, Roses, Heroes, Terry's Chocolate Orange, Terry's All Gold, Toblerone),
+Mars brands (Celebrations),
+Guylian,
+Lindt: Lindor, Lindt
+Waitrose,
+Co-op,
+M&S,
+Sainsbury's
+
+Worst company rating for palm oil:
+Thorntons,
+Elizabeth Shaw,
+ASDA,
+Morrisons,
+Tesco,
+Aldi,
+Lidl,
+Iceland
+*/
+// palm oil free
+{ company: "Divine", products: [], hover: HoverTextEnum.chocs_nopalm }, //After Dinner thins, Chocolate Bar Selection, Belgian Chocolate Collection
+{ company: "Booja Booja", products: [], hover: HoverTextEnum.chocs_nopalm },
+{ company: "Montezuma", products: [], hover: HoverTextEnum.chocs_nopalm },
+{ company: "Vivani", products: [], hover: HoverTextEnum.chocs_nopalm },
 //Co-op: 24 Assorted Chocolate Truffles, Chocolate Coins, Truly Irresistible Milk Chocolate Truffles gift cube, Truly Irresistible Mint Selection, Loved By Us Belgian Chocolate Pralines,  Loved By Us Irish Cream Liqueurs
 //M&S: Sequin Star/Tree with Truffles, Sparkling Wine Truffles, Dulce de Leche Truffles, Marc de Champagne Truffles, Mixologist's Box, Chocolate filled Christmas Crackers, Gastronomic Collection, Sparkling Caramels, Marzipan Collection, Italian Gianduiotto
 //Waitrose: Dark Chocolate Mint Creams, Dark Chocolate Mint Thins, Chocolate Mint Collection, Chocolate Ginger, Seriously Chocolatey milk chocolate truffles, Seriously Chocolatey Marc de Champagne dark truffles
-{ company: "Sainsbury's", products: ["After Dinner Mint Thins", "Dark Chocolate Orange Thins", "Taste the Difference Belgian Chocolate Cranberry and Pistachio Wreath", "Belgian Chocolate Seashells", "Taste the Difference Belgian Marzipan Assortment", "Crunchy Mint Sticks", "Crunchy Orange Sticks", "Milk Chocolate Brazils", "Milk Chocolate Honeycomb", "Taste the Difference Swiss Hazelnut Praline Truffles", "Taste the Difference Swiss Milk Choc Baubles", "Taste the Difference Swiss Milk Choc Tree Decorations"] },
-{ company: "Nestle", products: ["After Eight mints"] },
-{ company: "Terry's", products: ["Chocolate Orange Plain"] },
-{ company: "Toblerone", products: [] },
-{ company: "Guylian", products: ["Seashells", "Dark Chocolate Sea Horses", "Pearles d'Ocean tin"]},
-{ company: "Lindt", products: ["hello"] },
+{ company: "Sainsbury's", products: ["After Dinner Mint Thins", "Dark Chocolate Orange Thins", "Taste the Difference Belgian Chocolate Cranberry and Pistachio Wreath", "Belgian Chocolate Seashells", "Taste the Difference Belgian Marzipan Assortment", "Crunchy Mint Sticks", "Crunchy Orange Sticks", "Milk Chocolate Brazils", "Milk Chocolate Honeycomb", "Taste the Difference Swiss Hazelnut Praline Truffles", "Taste the Difference Swiss Milk Choc Baubles", "Taste the Difference Swiss Milk Choc Tree Decorations"], hover: HoverTextEnum.chocs_nopalm },
+{ company: "Nestle", products: ["After Eight mints"], hover: HoverTextEnum.chocs_nopalm },
+{ company: "Terry's", products: ["Chocolate Orange Plain"], hover: HoverTextEnum.chocs_nopalm },
+{ company: "Toblerone", products: [], hover: HoverTextEnum.chocs_nopalm },
+{ company: "Guylian", products: ["Seashells", "Dark Chocolate Sea Horses", "Pearles d'Ocean tin"], hover: HoverTextEnum.chocs_nopalm },
+{ company: "Lindt", products: ["hello"], hover: HoverTextEnum.chocs_nopalm },
 
-{ company: "Cocoa Loco", products: [] },
-{ company: "Ferrero Rocher", products: [] },
-{ company: "Raffaello", products: [] },
+{ company: "Cocoa Loco", products: [], hover: HoverTextEnum.chocs_organic },
+{ company: "Ferrero Rocher", products: [], hover: HoverTextEnum.chocs_sustainable },
+{ company: "Raffaello", products: [], hover: HoverTextEnum.chocs_sustainable },
 //Nestle brands
-{ company: "After Eight", products: [] },
-{ company: "Black Magic", products: [] },
-{ company: "Dairy Box", products: [] },
-{ company: "Quality Street", products: [] },
+{ company: "After Eight", products: [], hover: HoverTextEnum.chocs_sustainable },
+{ company: "Black Magic", products: [], hover: HoverTextEnum.chocs_sustainable },
+{ company: "Dairy Box", products: [], hover: HoverTextEnum.chocs_sustainable },
+{ company: "Quality Street", products: [], hover: HoverTextEnum.chocs_sustainable },
 //Mondelez brands
-{ company: "Green & Black's", products: [] },
-{ company: "Cadbury", products: ["Milk Tray", "Roses", "Heroes"] },
-{ company: "Terry's", products: ["Chocolate Orange", "All Gold"] },
-{ company: "Toblerone", products: [] },
-{ company: "Celebrations", products: ["240g", "Mini Pack"] }, // to avoid grabbing all things with celebbrations in the title!
-{ company: "Lindt", products: ["Lindor"] }
+{ company: "Green & Black's", products: [], hover: HoverTextEnum.chocs_sustainable },
+{ company: "Cadbury", products: ["Milk Tray", "Roses", "Heroes"], hover: HoverTextEnum.chocs_sustainable },
+{ company: "Terry's", products: ["Chocolate Orange", "All Gold"], hover: HoverTextEnum.chocs_sustainable },
+{ company: "Toblerone", products: [], hover: HoverTextEnum.chocs_sustainable },
+{ company: "Celebrations", products: ["240g", "Mini Pack"], hover: HoverTextEnum.chocs_sustainable }, // to avoid grabbing all things with celebbrations in the title!
+{ company: "Lindt", products: ["Lindor"], hover: HoverTextEnum.chocs_sustainable }
 //Waitrose,Co-op,M&S,Sainsbury's
 
 ];
 
 var gBadProducts = [
-{ company: "Sainsbury's", products: ["Shortbread Fingers, Basics"] }, 
+{ company: "Sainsbury's", products: ["Shortbread Fingers, Basics"], hover: HoverTextEnum.biscuits_bad }, 
 
 // pet food
-{ company: "Applaws", products: [] }, 
-{ company: "Encore", products: [] }, 
-{ company: "Butcher's", products: [] }, 
-{ company: "Hi-Life", products: [] }, 
-{ company: "Eukanuba", products: [] }, 
-{ company: "Iams", products: [] }, 
+{ company: "Applaws", products: [], hover: HoverTextEnum.petfood_bad }, 
+{ company: "Encore", products: [], hover: HoverTextEnum.petfood_bad }, 
+{ company: "Butcher's", products: [], hover: HoverTextEnum.petfood_bad }, 
+{ company: "Hi-Life", products: [], hover: HoverTextEnum.petfood_bad }, 
+{ company: "Eukanuba", products: [], hover: HoverTextEnum.petfood_bad }, 
+{ company: "Iams", products: [], hover: HoverTextEnum.petfood_bad }, 
 //Tesco, Morrisons, ASDA, Aldi, Lidl
 
 //Boxes of chocolates and gift chocolates
-{ company: "Thorntons", products: [] }, 
-{ company: "Elizabeth Shaw", products: [] }
+{ company: "Thorntons", products: [], hover: HoverTextEnum.chocs_bad }, 
+{ company: "Elizabeth Shaw", products: [], hover: HoverTextEnum.chocs_bad }
 //ASDA,Morrisons,Tesco,Aldi,Lidl,Iceland 
   
 ];

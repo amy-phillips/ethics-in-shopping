@@ -12,16 +12,20 @@ function TitleContainsACompany(title, companies) {
         // next check we have at least one of the item names
         var prodLength = companies[c].products.length;
         if(prodLength == 0)
-            return true;
+            return companies[c];
         
         for (var p = 0; p < prodLength; p++) {
             if(title.indexOf(companies[c].products[p]) != -1){
-                return true;
+                return companies[c];
             }
         }
     }
 
-    return false;
+    return null;
+}
+
+function GetHoverText(product) {
+    return product.company + product.hover;
 }
 
 function SetItemBackgrounds() {
@@ -31,18 +35,21 @@ function SetItemBackgrounds() {
         var brandname = $(this).find(".productNameAndPromotions").text();
 
         // set bg colour based on goodness
-        if(TitleContainsACompany(brandname, gBadProducts)) {
+        var company = TitleContainsACompany(brandname, gBadProducts);
+        if(company) {
             console.log(brandname + " is a baddie");
             $(this).css('background-color', 'tomato');
-        } else if(TitleContainsACompany(brandname, gGoodProducts)) {
-            console.log(brandname + " is a goodie");
-            $(this).css('background-color', 'lawngreen'); 
+            $(this).attr('title', GetHoverText(company));
         } else {
-            //console.log(brandname + " is unknown");
+            company = TitleContainsACompany(brandname, gGoodProducts);
+            if(company) {
+                console.log(brandname + " is a goodie");
+                $(this).css('background-color', 'lawngreen'); 
+                $(this).attr('title', GetHoverText(company));
+            } 
         }
     });
 }
-
 
 function waitForReady(){
 
