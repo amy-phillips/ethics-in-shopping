@@ -28,27 +28,37 @@ function GetHoverText(product) {
     return product.company + product.hover;
 }
 
+function SetBackground(brandname, div) {
+    // set bg colour based on goodness
+    var company = TitleContainsACompany(brandname, gBadProducts);
+    if(company) {
+        div.css('background-color', 'tomato');
+        div.attr('title', GetHoverText(company));
+    } else {
+        company = TitleContainsACompany(brandname, gGoodProducts);
+        if(company) {
+            div.css('background-color', 'lawngreen'); 
+            div.attr('title', GetHoverText(company));
+        } 
+    }
+}
+
 function SetItemBackgrounds() {
-    var products = $('.product');
+    // search results or multiple results
+    var products = $('.gridItem');
     products.each(function(){
         // grab the brand text from the label
         var brandname = $(this).find(".productNameAndPromotions").text();
 
-        // set bg colour based on goodness
-        var company = TitleContainsACompany(brandname, gBadProducts);
-        if(company) {
-            console.log(brandname + " is a baddie");
-            $(this).css('background-color', 'tomato');
-            $(this).attr('title', GetHoverText(company));
-        } else {
-            company = TitleContainsACompany(brandname, gGoodProducts);
-            if(company) {
-                console.log(brandname + " is a goodie");
-                $(this).css('background-color', 'lawngreen'); 
-                $(this).attr('title', GetHoverText(company));
-            } 
-        }
+        SetBackground(brandname, $(this));
     });
+
+    // product details for one product
+    var pdp = $('.productSummary');
+    var product = pdp.find('.productTitleDescriptionContainer');
+    if(pdp && product) {
+        SetBackground(product.text(), pdp);
+    }
 }
 
 function waitForReady(){

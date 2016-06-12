@@ -3,7 +3,7 @@
 
   "name": "Ethics In Shopping",
   "description": "This extension tells you which Sainsbury's items contain unethical palm oil by setting the background colour.",
-  "version": "1.0",
+  "version": "1.2",
 
   "browser_action": {
     "default_icon": "icon.png",
