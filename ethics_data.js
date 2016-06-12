@@ -246,7 +246,7 @@ Iceland
 
 var gBadProducts = [
 { company: ["Sainsbury's"], products: ["Shortbread Fingers, Basics"], hover: HoverTextEnum.biscuits_bad }, 
-{ company: ["Tesco"], products: ["Biscuits","Mini Shortbread Bites",], hover: HoverTextEnum.biscuits_bad },
+{ company: ["Tesco"], products: ["Mini Shortbread Bites","Custard Cream Biscuits","Custard Creams Biscuits","Digestive","Malted Milk Biscuits","Biscuits For Cheese","Sweet Biscuit Assortment","Choky","Snappy","Mini Chocolate Breakfast Biscuit","Giant Custard Cream Biscuit","Bourbon Creams Biscuits","Rich Tea Finger Biscuits","Oaty Rounds Biscuits","Variety Barrel","Chocolate Oaty Biscuits","Shortcake Biscuits","Garibaldi Biscuits","Shorties Biscuits","Breakfast Biscuits","Viennese Biscuits","Chewy Caramel Wafer Biscuit","Milk Chocolate Swirl Biscuits","Ginger Nuts Biscuits","Malted Milk Flavoured Biscuits","Nice 200G"], hover: HoverTextEnum.biscuits_bad },
 
 // pet food
 { company: ["Applaws"], products: [], hover: HoverTextEnum.petfood_bad }, 
