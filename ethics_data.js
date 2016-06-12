@@ -218,7 +218,7 @@ Iceland
 //Co-op: 24 Assorted Chocolate Truffles, Chocolate Coins, Truly Irresistible Milk Chocolate Truffles gift cube, Truly Irresistible Mint Selection, Loved By Us Belgian Chocolate Pralines,  Loved By Us Irish Cream Liqueurs
 //M&S: Sequin Star/Tree with Truffles, Sparkling Wine Truffles, Dulce de Leche Truffles, Marc de Champagne Truffles, Mixologist's Box, Chocolate filled Christmas Crackers, Gastronomic Collection, Sparkling Caramels, Marzipan Collection, Italian Gianduiotto
 //Waitrose: Dark Chocolate Mint Creams, Dark Chocolate Mint Thins, Chocolate Mint Collection, Chocolate Ginger, Seriously Chocolatey milk chocolate truffles, Seriously Chocolatey Marc de Champagne dark truffles
-{ company: ["Sainsbury's"], products: ["After Dinner Mint Thins", "Dark Chocolate Orange Thins", "Taste the Difference Belgian Chocolate Cranberry and Pistachio Wreath", "Belgian Chocolate Seashells", "Taste the Difference Belgian Marzipan Assortment", "Crunchy Mint Sticks", "Crunchy Orange Sticks", "Milk Chocolate Brazils", "Milk Chocolate Honeycomb", "Taste the Difference Swiss Hazelnut Praline Truffles", "Taste the Difference Swiss Milk Choc Baubles", "Taste the Difference Swiss Milk Choc Tree Decorations"], hover: HoverTextEnum.chocs_nopalm },
+{ company: ["Sainsbury's"], products: ["After Dinner Mint Thins", "Dark Chocolate Orange Thins", "Taste the Difference Belgian Chocolate Cranberry and Pistachio Wreath", "Belgian Chocolate Seashells", "Taste the Difference Belgian Marzipan Assortment", "Crunchy Mint Sticks", "Crunchy Orange Sticks", "Milk Chocolate Brazils", "Milk Chocolate Honeycomb", "Taste the Difference Swiss Hazelnut Praline Truffles", "Taste the Difference Swiss Milk Choc Baubles", "Taste the Difference Swiss Milk Choc Tree Decorations","Dark Chocolate Mint"], hover: HoverTextEnum.chocs_nopalm },
 { company: ["Nestle"], products: ["After Eight mints"], hover: HoverTextEnum.chocs_nopalm },
 { company: ["Terry's"], products: ["Chocolate Orange Plain"], hover: HoverTextEnum.chocs_nopalm },
 { company: ["Toblerone"], products: [], hover: HoverTextEnum.chocs_nopalm },
@@ -245,7 +245,7 @@ Iceland
 ];
 
 var gBadProducts = [
-{ company: ["Sainsbury's"], products: ["Shortbread Fingers, Basics"], hover: HoverTextEnum.biscuits_bad }, 
+
 { company: ["Tesco"], products: ["Mini Shortbread Bites","Custard Cream Biscuits","Custard Creams Biscuits","Digestive","Malted Milk Biscuits","Biscuits For Cheese","Sweet Biscuit Assortment","Choky","Snappy","Mini Chocolate Breakfast Biscuit","Giant Custard Cream Biscuit","Bourbon Creams Biscuits","Rich Tea Finger Biscuits","Oaty Rounds Biscuits","Variety Barrel","Chocolate Oaty Biscuits","Shortcake Biscuits","Garibaldi Biscuits","Shorties Biscuits","Breakfast Biscuits","Viennese Biscuits","Chewy Caramel Wafer Biscuit","Milk Chocolate Swirl Biscuits","Ginger Nuts Biscuits","Malted Milk Flavoured Biscuits","Nice 200G"], hover: HoverTextEnum.biscuits_bad },
 
 // pet food
