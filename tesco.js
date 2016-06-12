@@ -15,6 +15,8 @@ function SetItemBackgrounds() {
     if(pdp && product) {
         SetBackground(product.text(), pdp);
     }
+
+    BiggifyPalmOil();
 }
 
 function BiggifyPalmOil() {
@@ -37,9 +39,6 @@ function waitForReady(){
         }, 10 );
     }
     else{
-        BiggifyPalmOil();
-
-
         // we run our code to set bg colours periodically to deal with users filtering etc
         setInterval(SetItemBackgrounds, 2000);
     }

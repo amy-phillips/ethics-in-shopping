@@ -17,14 +17,22 @@ function SetItemBackgrounds() {
     if(pdp && product) {
         SetBackground(product.text(), pdp);
     }
+
+    BiggifyPalmOil();
 }
 
 function BiggifyPalmOil() {
     var ingredients = $('.productIngredients');
-    if(!ingredients)
+    if(ingredients.length == 0)
+        ingredients = $('.productText');
+
+    if(ingredients.length == 0)
         return;
 
-    palm = ingredients.find("li:contains('Palm')")
+    palm = ingredients.find("li:contains('Palm')");
+    if(palm.length == 0)
+        palm = ingredients.find("p:contains('Palm')");
+
     if(palm) {
         palm.css({ 'color': 'red', 'font-size': '150%' });
     }
@@ -39,8 +47,6 @@ function waitForReady(){
         }, 10 );
     }
     else{
-        BiggifyPalmOil();
-
         // we run our code to set bg colours periodically to deal with users filtering etc
         setInterval(SetItemBackgrounds, 2000);
     }
