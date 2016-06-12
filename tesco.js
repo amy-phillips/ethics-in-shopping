@@ -17,6 +17,17 @@ function SetItemBackgrounds() {
     }
 }
 
+function BiggifyPalmOil() {
+    var ingredients = $('.content');
+    if(!ingredients)
+        return;
+
+    palm = ingredients.find("p:contains('Palm')")
+    if(palm) {
+        palm.css({ 'color': 'red' });
+    }
+}
+
 function waitForReady(){
 
     // ensure document readystate is complete before messing with colours
@@ -26,6 +37,9 @@ function waitForReady(){
         }, 10 );
     }
     else{
+        BiggifyPalmOil();
+
+
         // we run our code to set bg colours periodically to deal with users filtering etc
         setInterval(SetItemBackgrounds, 2000);
     }
