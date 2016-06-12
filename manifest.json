@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Ethics In Shopping",
-  "description": "This extension tells you which items contain unethical palm oil by setting the background colour on the Sainsbury's or Tesco website.",
+  "description": "Tells you which items contain unethical palm oil by setting the background colour on the Sainsbury's or Tesco website",
   "version": "1.2",
 
   "browser_action": {

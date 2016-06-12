@@ -257,7 +257,7 @@ var gBadProducts = [
 { company: ["HiLife","Hi Life","Hilife"], products: [], hover: HoverTextEnum.petfood_bad }, 
 { company: ["Eukanuba"], products: [], hover: HoverTextEnum.petfood_bad }, 
 { company: ["Iams"], products: [], hover: HoverTextEnum.petfood_bad }, 
-{ company: ["Tesco"], products: ["Cat Pouches","Cat Sticks","Cat Can Cuts","Cat Food","Cats Choice","Cat Treats","Treats For Cats","Cat In Cuts","Cat Chunks"], hover: HoverTextEnum.petfood_bad },
+{ company: ["Tesco"], products: ["Cat Pouches","Cat Sticks","Cat Can Cuts","Cat Food","Cats Choice","Cat Treats","Treats For Cats","Cat In Cuts","Cat Chunks","Catcuts"], hover: HoverTextEnum.petfood_bad },
 { company: ["Tesco"], products: ["Dog Chunks","Dog Chunk","Dog Healthy","Dog Food","Dog Mixer","Dog Supermeat","Dog Treat","Treats For Dogs","Complete Worker Dog","Meaty Strips For Dogs","Dental Sticks","Filled Log Bone","Meaty Roll","Rich In Chicken Treats"], hover: HoverTextEnum.petfood_bad },
 //Tesco, Morrisons, ASDA, Aldi, Lidl
 
