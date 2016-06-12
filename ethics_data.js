@@ -128,7 +128,7 @@ Applaws, Encore, Butcher's, Hi-Life, Eukanuba, Iams, Tesco, Morrisons, ASDA, Ald
 { company: "Pedigree", products: [], hover: HoverTextEnum.petfood_sustainable },
 { company: "Cesar", products: [], hover: HoverTextEnum.petfood_sustainable },
 { company: "Chappie", products: [], hover: HoverTextEnum.petfood_sustainable },
-//{ company: "Sainsbury's", products: [] }, // hmm read out category?  TODO
+{ company: "Sainsbury's", products: ["Delicious Collection"], hover: HoverTextEnum.petfood_sustainable },
  
 /******************************************************************************************************
 Palm oil free nut butters:
