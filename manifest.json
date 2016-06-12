@@ -3,7 +3,7 @@
 
   "name": "Ethics In Shopping",
   "description": "Tells you which items contain unethical palm oil by setting the background colour on the Sainsbury's or Tesco website",
-  "version": "1.2",
+  "version": "1.3",
 
   "browser_action": {
     "default_icon": "icon.png",
