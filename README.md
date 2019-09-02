@@ -1,6 +1,14 @@
 # ethics-in-shopping
 Chrome plugin to inform ethical shopping decisions
 
+Now replaced by https://github.com/amy-phillips/EthicalShopping - a rewrite that parses the information straight off ethical consumer website, so much lower maintenance!
+
+
+
+
+
+Old description:
+
 This extension sets the background colour of items on the Sainsbury's or Tesco website.  
 Items containing unethical palm oil get a red background.  
 Items not containing palm oil, or those containing ethically sourced palm oil get a green background.
